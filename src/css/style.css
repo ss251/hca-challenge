@@ -1,0 +1,30 @@
+.navbar {
+  background-color: #02193e;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-logo img {
+  width: 3rem;
+}
+
+.nav-logo h1 {
+  margin-top: 0.7rem;
+  margin-left: 0.5rem;
+  font-size: large;
+  color: white;
+  text-decoration: none !important;
+}
+
+.nav-item-covid a,
+.nav-item-all a,
+.nav-item-user a {
+  color: white;
+}
+
+.search-bar {
+  margin-top: 0.1rem;
+}
