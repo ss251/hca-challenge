@@ -13,6 +13,16 @@ const VideoCard = ({ video }) => {
   if (typeof videoId === "undefined") {
     videoId = video.snippet.resourceId.videoId;
   }
+  // date formatting as seen on youtube
+  const date =
+    new Date(Date.parse(video.snippet.publishedAt))
+      .toString()
+      .substring(3, 10) +
+    ", " +
+    new Date(Date.parse(video.snippet.publishedAt))
+      .toString()
+      .substring(10, 15);
+
   return (
     <div className="card">
       <ModalVideo
@@ -40,7 +50,7 @@ const VideoCard = ({ video }) => {
             <div className="video-descr">
               <p className="mb-1">{video.snippet.description}</p>
             </div>
-            <div className="video-date">{video.snippet.publishedAt}</div>
+            <div className="video-date">{"Uploaded At: " + date}</div>
           </div>
         </div>
       </div>
