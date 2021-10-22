@@ -1,12 +1,14 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Covid from "../pages/Covid";
 
-const App = () => {
-  return (
-    <div>
-      <Navbar />
-    </div>
-  );
-};
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Covid />
+      </div>
+    );
+  }
+}
 
 export default App;

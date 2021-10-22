@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import hca_logo from "../css/images/hca_logo.png";
 
 // navbar using bootstrap-css
-const Navbar = () => {
+const Navbar = (props) => {
+  const [search, setSearch] = useState("");
+
+  const handleChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSearchSubmit(search);
+  };
+
   return (
     <div>
       <nav className="navbar navbar-default navbar-fixed-top">
@@ -14,19 +25,20 @@ const Navbar = () => {
             </div>
           </a>
           <div className="nav-item-covid">
-            <a className="nav-link" aria-current="page" href="#">
+            <a className="nav-link" aria-current="page" href="/">
               Covid-19 Videos
             </a>
           </div>
           <div className="nav-item-all">
-            <a className="nav-link" href="#">
+            <a className="nav-link" href="/all">
               All Videos
             </a>
           </div>
           <div className="search-bar">
-            <form clasName="d-flex">
+            <form onSubmit={handleSubmit} className="d-flex">
               <input
-                clasName="form-control me-2"
+                onChange={handleChange}
+                className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
