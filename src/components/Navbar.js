@@ -23,7 +23,7 @@ const Navbar = (props) => {
   return (
     <div>
       <nav className="navbar navbar-default navbar-fixed-top">
-        <NavLink to="/covid" className="navbar-logo">
+        <NavLink to="/" className="navbar-logo">
           <div className="nav-logo">
             <img alt="hca-logo" src={hca_logo} />
             <h1>HCA Video Library</h1>
@@ -47,7 +47,7 @@ const Navbar = (props) => {
           <li className="nav-item">
             <div className="nav-item-covid">
               <NavLink
-                to="/covid"
+                to="/"
                 className="nav-link"
                 aria-current="page"
                 activeStyle={{ color: "#2A6ED1" }}
