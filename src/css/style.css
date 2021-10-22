@@ -3,9 +3,15 @@
   background-color: #02193e;
 }
 
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-logo {
   display: flex;
   flex-direction: row;
+  margin-left: 2rem;
 }
 
 .nav-logo img {
@@ -13,7 +19,7 @@
 }
 
 .nav-logo h1 {
-  margin-top: 0.7rem;
+  margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-size: large;
   color: white;
@@ -24,10 +30,19 @@
 .nav-item-all a,
 .nav-item-user a {
   color: white;
+  margin-right: 2rem;
+  margin-top: 0.5rem;
 }
 
 .search-bar {
-  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.1rem;
+  width: 25%;
+}
+
+/* hiding burger icon in desktop view */
+.burger-menu {
+  display: none;
 }
 
 /* video-list */
@@ -52,6 +67,7 @@
   margin-top: 0.7rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  color: #02193e;
 }
 
 .card-text {
@@ -63,7 +79,13 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 375px) {
+.fas {
+  color: white;
+  font-size: x-large;
+}
+
+@media (max-width: 800px) {
+  /* video-card mobile view */
   .card {
     width: 20rem;
     border-radius: 0.3rem;
@@ -76,5 +98,77 @@
   }
   .img-square-wrapper {
     width: 20rem;
+  }
+  /* navbar mobile view */
+  .navbar {
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-logo img {
+    width: 2.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: -0.2rem;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-logo h1 {
+    margin-top: 0.7rem;
+    margin-left: 0.5rem;
+    font-size: xx-small;
+    color: white;
+    width: 3.5rem;
+    text-decoration: none !important;
+  }
+  .nav-item-covid a,
+  .nav-item-all a,
+  .nav-item-user a {
+    color: white;
+    font-size: small;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-bar {
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+    width: 11rem;
+    margin-right: 4.5rem;
+  }
+  .burger-menu {
+    display: flex;
+    position: absolute;
+    margin-top: 1rem;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 }
