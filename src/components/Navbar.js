@@ -48,6 +48,7 @@ const Navbar = (props) => {
             <div className="nav-item-covid">
               <NavLink
                 to="/"
+                exact={true}
                 className="nav-link"
                 aria-current="page"
                 activeStyle={{ color: "#2A6ED1" }}
