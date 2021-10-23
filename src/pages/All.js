@@ -7,16 +7,20 @@ const All = () => {
   const [videos, setVideos] = useState([]);
 
   const handleSearch = async (search) => {
-    const response = await apiSearch.get("/search", {
-      params: {
-        // excluding COVID-19 from search results
-        q: "-COVID-19 " + search,
-        // HCA Healthcare channel ID
-        channelId: "UCL03ygcTgIbe36o2Z7sReuQ",
-        type: "video",
-      },
-    });
-    setVideos(response.data.items);
+    try {
+      const response = await apiSearch.get("/search", {
+        params: {
+          // excluding COVID-19 from search results
+          q: "-COVID-19 " + search,
+          // HCA Healthcare channel ID
+          channelId: "UCL03ygcTgIbe36o2Z7sReuQ",
+          type: "video",
+        },
+      });
+      setVideos(response.data.items);
+    } catch (error) {
+      console.log(error.response.data.error);
+    }
   };
 
   useEffect(() => {
