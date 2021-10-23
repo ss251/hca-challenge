@@ -120,6 +120,24 @@
   .img-square-wrapper {
     width: 20rem;
   }
+  .fa-play-circle {
+    position: absolute;
+    left: 7rem;
+    top: 3rem;
+    font-size: 5rem;
+    opacity: 0.5;
+    transition: 100ms;
+    cursor: pointer;
+  }
+  .fa-play-circle:hover {
+    position: absolute;
+    left: 7rem;
+    top: 3rem;
+    font-size: 5rem;
+    opacity: 0.7;
+    transition: 100ms;
+    cursor: pointer;
+  }
   /* navbar mobile view */
   .navbar {
     flex-direction: row;
