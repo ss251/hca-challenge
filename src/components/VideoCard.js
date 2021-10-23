@@ -40,10 +40,11 @@ const VideoCard = ({ video }) => {
             alt={video.snippet.description}
             onClick={() => setOpen(true)}
           />
+          <i class="fas fa-play-circle" onClick={() => setOpen(true)}></i>
         </div>
 
         <div className="video-details">
-          <div className="card-title">
+          <div className="card-title" onClick={() => setOpen(true)}>
             <h5 className="mb-1">{video.snippet.title}</h5>
           </div>
           <div className="card-text">

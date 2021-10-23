@@ -69,6 +69,7 @@
   margin-left: 1rem;
   margin-right: 1rem;
   color: #02193e;
+  cursor: pointer;
 }
 
 .card-text {
@@ -83,6 +84,25 @@
 .fas {
   color: white;
   font-size: x-large;
+}
+
+.fa-play-circle {
+  position: absolute;
+  left: 8rem;
+  top: 4rem;
+  font-size: xxx-large;
+  opacity: 0.5;
+  color: #02193e;
+}
+
+.fa-play-circle:hover {
+  position: absolute;
+  left: 7rem;
+  top: 3rem;
+  font-size: 5rem;
+  opacity: 0.7;
+  transition: 100ms;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
