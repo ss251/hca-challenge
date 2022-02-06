@@ -1,6 +1,8 @@
 # hca-challenge
 
-This web app serves as a portal for accessing COVID-19 related videos uploaded to the HCA youtube channel.
+This web app serves as a portal for accessing COVID-19 related videos uploaded to the HCA youtube channel. 
+
+Access the site [here](https://hcavideolibrary.netlify.app/)
 
 ### `npm install`
 
